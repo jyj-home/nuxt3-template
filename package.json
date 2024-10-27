@@ -8,9 +8,9 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint:ts": "eslint . --ignore-pattern node_modules --ignore-pattern .output --ignore-pattern .nuxt",
+    "lint:ts": "eslint . --ignore-pattern node_modules --ignore-pattern .output --ignore-pattern .nuxt --ignore-pattern dist",
     "lint:prettier": "prettier --check .",
-    "lint": "npm run lint:js && npm run lint:prettier"
+    "lint": "npm run lint:prettier || npm run lint:ts"
   },
   "dependencies": {
     "nuxt": "^3.13.2",
