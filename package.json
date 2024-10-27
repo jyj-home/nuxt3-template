@@ -7,7 +7,10 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint:ts": "eslint . --ignore-pattern node_modules --ignore-pattern .output --ignore-pattern .nuxt",
+    "lint:prettier": "prettier --check .",
+    "lint": "npm run lint:js && npm run lint:prettier"
   },
   "dependencies": {
     "nuxt": "^3.13.2",
@@ -17,9 +20,10 @@
   "devDependencies": {
     "@eslint/js": "^9.13.0",
     "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-vue": "^9.29.1",
     "globals": "^15.11.0",
-    "prettier": "^3.3.3",
-    "typescript-eslint": "^8.11.0"
+    "typescript-eslint": "^8.11.0",
+    "prettier": "^3.3.3"
   }
 }
